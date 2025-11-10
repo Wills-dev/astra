@@ -78,6 +78,19 @@
   --sidebar-ring: oklch(0.705 0.015 286.067);
 }
 
+:root {
+  --font-body: "Inter", sans-serif;
+  --font-heading: "Times Now", serif;
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
 .dark {
   --background: oklch(0.141 0.005 285.823);
   --foreground: oklch(0.985 0 0);
@@ -119,4 +132,17 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.nav-bar-clip-path {
+  clip-path: circle(100px at 90% -20%);
+  -webkit-clip-path: circle(100px at 90% -20%);
+  transition: all 1.4s ease-out;
+  pointer-events: none;
+}
+
+.nav-bar-clip-path.open {
+  clip-path: circle(2000px at 90% -10%);
+  -webkit-clip-path: circle(2000px at 90% -10%);
+  pointer-events: all;
 }

@@ -90,8 +90,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$store$2f$provider$2e$
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 const metadata = {
     metadataBase: new URL(baseUrl),
-    title: "Emilist Admin",
-    description: "Emilist Admin Panel - Manage and oversee jobs, projects, and user activities with ease.",
+    title: "Astra",
+    description: "Astra - Manage and oversee jobs, projects, and user activities with ease.",
     openGraph: {
         title: "Emilist Admin - Manage Jobs and Projects",
         description: "Emilist Admin Panel - Your hub for managing jobs and projects.",
@@ -115,22 +115,22 @@ function RootLayout({ children }) {
                     children: children
                 }, void 0, false, {
                     fileName: "[project]/src/app/layout.tsx",
-                    lineNumber: 40,
+                    lineNumber: 41,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/layout.tsx",
-                lineNumber: 39,
+                lineNumber: 40,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/app/layout.tsx",
-            lineNumber: 38,
+            lineNumber: 39,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/layout.tsx",
-        lineNumber: 37,
+        lineNumber: 38,
         columnNumber: 5
     }, this);
 }
