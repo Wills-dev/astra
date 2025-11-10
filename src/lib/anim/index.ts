@@ -23,3 +23,21 @@ export const fadeIn = (
     },
   };
 };
+
+export const circleVariants = {
+  initial: (custom: "top" | "bottom") => ({
+    y: custom === "top" ? "5%" : "95%",
+  }),
+  animate: (custom: "top" | "bottom") => ({
+    y:
+      custom === "top"
+        ? ["5%", "1000%", "2000%", "1000%", "5%"]
+        : ["2000%", "1000%", "5%", "1000%", "%"],
+    transition: {
+      duration: 10,
+      repeat: Infinity,
+      ease: "easeInOut" as const,
+      times: [0, 0.25, 0.5, 0.75, 1],
+    },
+  }),
+};
