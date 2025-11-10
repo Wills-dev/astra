@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 
 import "../styles/globals.css";
 
@@ -9,24 +10,29 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: "Emilist Admin",
+  title: "Astra",
   description:
-    "Emilist Admin Panel - Manage and oversee jobs, projects, and user activities with ease.",
+    "Astra - AI assistant surfaces answers, insights, and updates tailored to every user’s journey.",
   openGraph: {
-    title: "Emilist Admin - Manage Jobs and Projects",
+    title: "Astra - AI assistant",
     description:
-      "Emilist Admin Panel - Your hub for managing jobs and projects.",
+      "Astra - AI assistant surfaces answers, insights, and updates tailored to every user’s journey.",
     images: [
       {
         url: "/hero-preview.jpg",
         width: 1200,
         height: 630,
-        alt: "Emilist Admin Preview Image",
+        alt: "Astra Preview Image",
       },
     ],
     type: "website",
   },
 };
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
 
 export default function RootLayout({
   children,
@@ -34,8 +40,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className={`${inter.variable}`}>
+      <body className="font-body">
         <QueryProvider>
           <Providers>{children}</Providers>
         </QueryProvider>
