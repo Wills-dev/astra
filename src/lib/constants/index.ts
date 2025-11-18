@@ -81,3 +81,9 @@ export const notificationItems = [
       "All servers are back online. Performance and stability have been optimized.",
   },
 ];
+
+export const quickSuggestions = [
+  "How do I authenticate requests?",
+  "Error handling for 404s",
+  "Show me pagination examples",
+];
