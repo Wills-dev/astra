@@ -15,7 +15,7 @@ const Container = ({
 
   return (
     <div
-      className={`${maxWidths[maxWidth]} mx-auto px-4 sm:px-6 lg:px-8 ${className}`}
+      className={`${maxWidths[maxWidth]} 2xl:mx-auto px-4 sm:px-6 xl:px-14 ${className}`}
     >
       {children}
     </div>

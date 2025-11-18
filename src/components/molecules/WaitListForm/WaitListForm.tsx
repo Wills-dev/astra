@@ -20,7 +20,14 @@ const WaitListForm = () => {
             className=" placeholder:text-[14px] placeholder:text-[#FAFAFA]"
           />
         </div>
-        <Button>Join the waitlist</Button>
+        {/* mobile view */}
+        <div className="sm:hidden">
+          <Button>Join</Button>
+        </div>
+        {/* Desktop view */}
+        <div className="max-sm:hidden">
+          <Button>Join the waitlist</Button>
+        </div>
       </form>
     </div>
   );
