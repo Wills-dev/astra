@@ -2,20 +2,12 @@ import { ContainerProps } from "@/lib/types";
 
 const Container = ({
   children,
-  maxWidth = "7xl",
-  className = "",
+  maxWidth = "",
+  className = "xl:px-14",
 }: ContainerProps) => {
-  const maxWidths = {
-    sm: "max-w-sm",
-    md: "max-w-md",
-    lg: "max-w-lg",
-    xl: "max-w-xl",
-    "7xl": "max-w-7xl",
-  };
-
   return (
     <div
-      className={`${maxWidths[maxWidth]} 2xl:mx-auto px-4 sm:px-6 xl:px-14 ${className}`}
+      className={`${maxWidth} 2xl:max-w-7xl w-full mx-auto px-4 sm:px-6  ${className}`}
     >
       {children}
     </div>

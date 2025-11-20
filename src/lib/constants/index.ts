@@ -110,3 +110,94 @@ export const companyLogos = [
   { name: "Epicurious", src: "/assets/images/companyLogo3.svg" },
   { name: "Nietzsch", src: "/assets/images/companyLogo4.svg" },
 ];
+
+export const faqContents = [
+  {
+    title: "Authentication",
+    query: "168 queries",
+    faqs: [
+      {
+        question: "How do I authenticate?",
+        percentage: 12,
+      },
+      {
+        question: "Rate limit errors",
+        percentage: 8,
+      },
+      {
+        question: "Webhook setup",
+        percentage: 4,
+      },
+      {
+        question: "Pagination examples",
+        percentage: 15,
+      },
+    ],
+  },
+  {
+    title: "Integration",
+    query: "20 queries",
+    faqs: [
+      {
+        question: "How do I integrate webhooks?",
+        percentage: 10,
+      },
+      {
+        question: "API endpoints",
+        percentage: 7,
+      },
+      {
+        question: "SDK installation",
+        percentage: 5,
+      },
+      {
+        question: "OAuth flow",
+        percentage: 13,
+      },
+    ],
+  },
+  {
+    title: "Best practices",
+    query: "12 queries",
+    faqs: [
+      {
+        question: "Caching strategies",
+        percentage: 9,
+      },
+      {
+        question: "Error handling",
+        percentage: 6,
+      },
+      {
+        question: "Security guidelines",
+        percentage: 11,
+      },
+      {
+        question: "Performance optimization",
+        percentage: 14,
+      },
+    ],
+  },
+  {
+    title: "Errors",
+    query: "18 queries",
+    faqs: [
+      {
+        question: "400 Bad Request",
+        percentage: 16,
+      },
+      {
+        question: "401 Unauthorized",
+        percentage: 12,
+      },
+      {
+        question: "429 Rate Limit",
+        percentage: 8,
+      },
+      {
+        question: "500 Server Error",
+        percentage: 5,
+      },
+    ],
+  },
+];

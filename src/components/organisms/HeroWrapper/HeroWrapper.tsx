@@ -6,7 +6,7 @@ import TopCompaniesWrapper from "../TopCompaniesWrapper/TopCompaniesWrapper";
 
 const HeroWrapper = () => {
   return (
-    <div className="2xl:max-w-7xl w-full mx-auto pl-4 sm:pl-6 lg:pl-8 pb-10">
+    <div className="2xl:max-w-7xl w-full mx-auto pl-4 sm:pl-6 lg:pl-14 pb-10">
       <div className="flex justify-end gap-2 h-[650px] overflow-y-hidden">
         <AnimatedHeroLine />
         <div className="max-w-3xl w-full relative overflow-x-hidden">
