@@ -201,3 +201,21 @@ export const faqContents = [
     ],
   },
 ];
+
+export const complaintsImages = [
+  {
+    id: 1,
+    src: "/assets/images/gdpr.svg",
+    alt: "gdpr",
+  },
+  {
+    id: 2,
+    src: "/assets/images/iso.svg",
+    alt: "soc-2",
+  },
+  {
+    id: 3,
+    src: "/assets/images/hipaa.svg",
+    alt: "hipaa",
+  },
+];

@@ -18,7 +18,7 @@ const TabButton = ({ title, query, isActive, onClick }: TabButtonProps) => {
       whileTap="tap"
       onClick={onClick}
       className={`
-        pl-3 pr-1 py-1 rounded-full text-xs font-medium
+        pl-3 pr-1 py-1 rounded-full text-xs
         transition-colors duration-300 font-body font-light
         ${
           isActive
