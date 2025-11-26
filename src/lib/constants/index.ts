@@ -1,3 +1,7 @@
+import { time, timeStamp } from "console";
+import { desc } from "framer-motion/client";
+import { text } from "stream/consumers";
+
 export const homeLinks = [
   {
     link: "/#",
@@ -217,5 +221,62 @@ export const complaintsImages = [
     id: 3,
     src: "/assets/images/hipaa.svg",
     alt: "hipaa",
+  },
+];
+
+export const encryptionSteps = [
+  { id: 1, text: "AES-256-GCM encryption" },
+  { id: 2, text: "Automatic key rotation" },
+  { id: 3, text: "HSM-backed keys" },
+];
+
+export const auditLogs = [
+  {
+    id: 1,
+    action: "Real-time logging",
+  },
+  { id: 2, action: "Tamper-proof records" },
+  {
+    id: 3,
+    action: "SIEM integration",
+  },
+];
+
+export const auditSteps = [
+  {
+    id: 1,
+    mainIcon: "/assets/icons/user.svg",
+    bgIcon: "/assets/icons/log-in-03.svg",
+    action: "Login:",
+    desc: "Logged in",
+    timeStamp: "12:45pm",
+    text: "by john@company.com",
+  },
+  {
+    id: 2,
+    mainIcon: "/assets/icons/book-stack.svg",
+    bgIcon: "/assets/icons/code-01.svg",
+    action: "Request:",
+    desc: "ap1/v1/users",
+    timeStamp: "01:17pm",
+    text: "sent to",
+  },
+  {
+    id: 3,
+    mainIcon: "/assets/icons/globe.svg",
+    bgIcon: "/assets/icons/shield-03.svg",
+    action: "System:",
+    desc: "security-vpc-03",
+    timeStamp: "02:45pm",
+    text: "logs synced to SIEM node",
+  },
+  {
+    id: 4,
+    mainIcon: "/assets/icons/framer.svg",
+    bgIcon: "/assets/icons/shield-off.svg",
+    action: "Audit:",
+    desc: "no tampering detected",
+    timeStamp: "03:15pm",
+    text: "integrity hash verified",
   },
 ];
