@@ -1,6 +1,7 @@
 "use client";
 
 import FaqWrapper from "@/components/organisms/FaqWrapper/FaqWrapper";
+import GuideSection from "@/components/organisms/GuideSection/GuideSection";
 import HeroSection from "@/components/organisms/HeroSection/HeroSection";
 import TrustedSection from "@/components/organisms/TrustedSection/TrustedSection";
 
@@ -10,6 +11,7 @@ export default function Home() {
       <HeroSection />
       <FaqWrapper />
       <TrustedSection />
+      <GuideSection />
     </div>
   );
 }

@@ -27,6 +27,18 @@ const EncryptionCard = () => {
     { startX: 0, startY: 0, endX: 0, endY: 0 },
   ]);
 
+  const controls = {
+    // CARD POSITIONING
+    cardGap: 70, // Gap between cards (px)
+    cardInitialOffset: 0, // Starting position offset (px)
+
+    // LINE SHAPE CONTROLS
+    curve1XPercent: 0.2, // Control Point 1: X position (0-1 = 0%-100% of horizontal distance)
+    curve1YOffset: -40, // Control Point 1: Y offset (negative = up, positive = down)
+    curve2XPercent: 0.5, // Control Point 2: X position (0-1)
+    curve2YOffset: 20, // Control Point 2: Y offset
+  };
+
   const updateLinePoints = () => {
     if (!imageRef.current || !containerRef.current) return;
 
@@ -38,11 +50,9 @@ const EncryptionCard = () => {
 
       const cardRect = cardRef.getBoundingClientRect();
 
-      // Start point: right center of shield
       const startX = imageRect.right - containerRect.left;
       const startY = imageRect.top + imageRect.height / 2 - containerRect.top;
 
-      // End point: left center of card
       const endX = cardRect.left - containerRect.left;
       const endY = cardRect.top + cardRect.height / 2 - containerRect.top;
 
@@ -53,13 +63,11 @@ const EncryptionCard = () => {
   };
 
   useEffect(() => {
-    // Initial calculation
     setTimeout(updateLinePoints, 100);
     window.addEventListener("resize", updateLinePoints);
     return () => window.removeEventListener("resize", updateLinePoints);
   }, []);
 
-  // Continuous updates during animation
   useEffect(() => {
     if (isInView) {
       const interval = setInterval(updateLinePoints, 16);
@@ -70,37 +78,34 @@ const EncryptionCard = () => {
   // FIX: Use array index instead of card.id
   const getPathData = (arrayIndex: number) => {
     const lineDataItem = lineData[arrayIndex];
-
-    // Safety check
     if (!lineDataItem) return "";
 
     const { startX, startY, endX, endY } = lineDataItem;
-
     if (!startX || !endX) return "";
 
     const horizontalDiff = endX - startX;
     const verticalDiff = endY - startY;
 
     if (isInView) {
-      // S-CURVE FORMULA:
-      // Control Point 1: Pull UP and to the right
-      const cp1X = startX + horizontalDiff * 0.25;
-      const cp1Y = startY - 50;
+      // 🎯 THE KEY TO STACKED CURVES (like the reference image):
+      // Use the SAME control point percentages for all lines
+      // The curves will naturally stack because cards are at different Y positions
 
-      // Control Point 2: Pull DOWN and to the right
-      const cp2X = startX + horizontalDiff * 0.75;
-      const cp2Y = endY + 50;
+      const cp1X = startX + horizontalDiff * controls.curve1XPercent;
+      const cp1Y = startY + controls.curve1YOffset; // Consistent offset from start
+
+      const cp2X = startX + horizontalDiff * controls.curve2XPercent;
+      const cp2Y = endY + controls.curve2YOffset; // Offset relative to each card
 
       return `M ${startX} ${startY} C ${cp1X} ${cp1Y}, ${cp2X} ${cp2Y}, ${endX} ${endY}`;
     } else {
-      // Initial state: straight horizontal line
       return `M ${startX} ${startY} L ${endX} ${endY}`;
     }
   };
 
   const getCardYOffset = (index: number) => {
     if (!isInView) return 0;
-    return index * 80; // 80px gap between cards
+    return controls.cardInitialOffset + index * controls.cardGap;
   };
 
   return (

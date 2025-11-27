@@ -1,10 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion";
-import TrustedCardsHeader from "../TrustedCardsHeader/TrustedCardsHeader";
-import { auditLogs, auditSteps } from "@/lib/constants";
 import Image from "next/image";
+
+import { motion } from "framer-motion";
+
+import { auditLogs, auditSteps } from "@/lib/constants";
+
 import AuditStepCard from "../AuditStepCard/AuditStepCard";
+import TrustedCardsHeader from "../TrustedCardsHeader/TrustedCardsHeader";
 
 const AuditCard = () => {
   return (
@@ -15,7 +18,6 @@ const AuditCard = () => {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="lg:col-span-2 sm:col-span-3 col-span-6 col-start-1 lg:row-start-2 sm:row-start-6 lg:row-end-5  sm:row-end-10 h-[459px] rounded-2xl  sm:py-8 py-6 overflow-hidden relative bg-[linear-gradient(184.6deg,#8A40A5_-3.72%,#FFB379_102.89%)]"
     >
-      {" "}
       <div className=" w-full h-full opacity-20 bg-cover bg-center bg-no-repeat bg-[url('/assets/images/bbg.jpg')] absolute top-0 left-0" />
       <div className="space-y-4 h-full">
         <div className="sm:px-6 px-2">

@@ -4,12 +4,12 @@ import TrustedCardWapper from "../TrustedCardWapper/TrustedCardWapper";
 
 const TrustedSection = () => {
   return (
-    <div className="bg-white sm:py-36 py-20">
+    <section className="bg-white sm:py-36 py-20">
       <Container>
         <TrustedHeader />
         <TrustedCardWapper />
       </Container>
-    </div>
+    </section>
   );
 };
 
