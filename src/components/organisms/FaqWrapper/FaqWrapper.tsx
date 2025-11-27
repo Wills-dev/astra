@@ -4,7 +4,7 @@ import FaqHeader from "@/components/molecules/FaqHeader/FaqHeader";
 
 const FaqWrapper = () => {
   return (
-    <div className="bg-[#F0F1F1] sm:py-36 py-20">
+    <section className="bg-[#F0F1F1] sm:py-36 py-20">
       <Container>
         <div className="w-full">
           <div className="flex items-center justify-between w-full gap-10 flex-wrap">
@@ -13,7 +13,7 @@ const FaqWrapper = () => {
           </div>
         </div>
       </Container>
-    </div>
+    </section>
   );
 };
 
