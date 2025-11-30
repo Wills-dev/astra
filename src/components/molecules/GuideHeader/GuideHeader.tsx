@@ -32,7 +32,7 @@ const GuideHeader = () => {
         <h2 className="sm:text-[48px] text-2xl font-medium font-heading leading-[100%] tracking-[-0.006em] text-center">
           How Astra Understands, Learns & Guides
         </h2>
-        <p className="text-center text-gray-500 max-sm:text-sm">
+        <p className="text-center text-gray-500 c">
           Astra reads your existing documentation, APIs, and changelogs —
           turning them into an intelligent knowledge graph.
         </p>
