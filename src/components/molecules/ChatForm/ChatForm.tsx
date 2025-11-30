@@ -1,9 +1,21 @@
 import ChatFormButton from "@/components/atoms/ChatFormButton/ChatFormButton";
 
-const ChatForm = () => {
+interface ChatFormProps {
+  parentStyle?: string;
+  childStyle?: string;
+}
+
+const ChatForm = ({
+  parentStyle = "h-[50.69px] rounded-[17.74px]",
+  childStyle = " h-[48.16px] px-[10.14px] rounded-[15.21px]",
+}: ChatFormProps) => {
   return (
-    <div className="w-full h-[50.69px] bg-linear-to-r from-0% from-[#8F4EFF] to-100% to-[#EC82FA] rounded-[17.74px] flex items-end">
-      <div className="bg-white h-[48.16px] w-full rounded-[15.21px] border-[0.32px] border-[#E8E8E8] flex items-center px-[10.14px] gap-1">
+    <div
+      className={`w-full bg-linear-to-r from-0% from-[#8F4EFF] to-100% to-[#EC82FA]  flex items-end ${parentStyle}`}
+    >
+      <div
+        className={`bg-white w-full border-[0.32px] border-[#E8E8E8] flex items-center gap-1 ${childStyle}`}
+      >
         <ChatFormButton
           iconSrc="/assets/icons/upload-icon.svg"
           altText="Attachment Icon"
