@@ -1,5 +1,6 @@
 "use client";
 
+import DocSection from "@/components/organisms/DocSection/DocSection";
 import FaqWrapper from "@/components/organisms/FaqWrapper/FaqWrapper";
 import GuideSection from "@/components/organisms/GuideSection/GuideSection";
 import HeroSection from "@/components/organisms/HeroSection/HeroSection";
@@ -14,6 +15,7 @@ export default function Home() {
       <TrustedSection />
       <GuideSection />
       <TeamSection />
+      <DocSection />
     </div>
   );
 }

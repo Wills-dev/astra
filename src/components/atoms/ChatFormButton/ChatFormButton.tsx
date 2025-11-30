@@ -4,12 +4,14 @@ interface ChatFormButtonProps {
   iconSrc: string;
   altText: string;
   className?: string;
+  size?: number;
 }
 
 const ChatFormButton = ({
   iconSrc,
   altText,
   className = "border-[#F0F1F1] border-[0.63px] h-[17.74px] w-[17.74px]",
+  size = 10.14,
 }: ChatFormButtonProps) => {
   return (
     <button
@@ -18,9 +20,9 @@ const ChatFormButton = ({
       <Image
         src={iconSrc}
         alt={altText}
-        width={12}
-        height={12}
-        className="h-[10.14px] w-[10.14px] object-contain"
+        width={size}
+        height={size}
+        className=" object-contain"
       />
     </button>
   );
