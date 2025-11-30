@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const TeamSection = () => {
   return (
-    <div className="bg-black sm:py-36 py-20">
+    <section className="bg-black sm:py-36 py-20">
       <Container>
         <div className="space-y-14">
           <TeamHeader />
@@ -21,7 +21,7 @@ const TeamSection = () => {
           </div>
         </div>
       </Container>
-    </div>
+    </section>
   );
 };
 
