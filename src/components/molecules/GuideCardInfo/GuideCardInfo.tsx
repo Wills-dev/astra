@@ -9,7 +9,7 @@ interface GuideCardInfoProps {
 
 const GuideCardInfo = ({ title, desc }: GuideCardInfoProps) => {
   return (
-    <div className="bg-[#FAFAFA] sm:px-4 px-2 space-y-2 py-4">
+    <div className="bg-[#FAFAFA]  space-y-2 py-4">
       <motion.h6
         animate={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

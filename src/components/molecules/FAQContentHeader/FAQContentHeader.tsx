@@ -22,7 +22,7 @@ const FAQContentHeader = ({
   onTimePeriodChange,
 }: FAQHeaderProps) => {
   return (
-    <div className="bg-linear-to-r from-[#D9B4F6] via-[#E5CAA1] to-[#F2DFAD] border border-gray-100 sm:px-6 px-3 pt-7 pb-5 rounded-t-xl">
+    <div className="bg-linear-to-r from-[#D9B4F6] to-[#F2DFAD] border border-gray-100 sm:px-6 px-3 pt-7 pb-5 rounded-t-xl">
       <motion.div
         variants={headerVariants}
         initial="hidden"
