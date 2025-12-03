@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const Logo = () => {
+const Logo = ({ url = "/assets/images/Logo.svg" }: { url?: string }) => {
   return (
     <Link href="/">
       <Image
-        src="/assets/images/Logo.svg"
+        src={url}
         alt="logo"
         width={120}
         height={60}
