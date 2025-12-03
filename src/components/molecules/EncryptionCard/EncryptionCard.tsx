@@ -6,6 +6,7 @@ import TrustedCardsHeader from "../TrustedCardsHeader/TrustedCardsHeader";
 import Image from "next/image";
 import EncryptionCardContent from "../EncryptionCardContent/EncryptionCardContent";
 import { encryptionSteps } from "@/lib/constants";
+import DashedLine from "@/components/atoms/DashedLine/DashedLine";
 
 const EncryptionCard = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -159,16 +160,15 @@ const EncryptionCard = () => {
             <Image
               src="/assets/images/container.svg"
               alt="contain"
-              width={120}
+              width={121}
               height={140}
-              className="object-contain"
+              className="object-contain w-[121px] h-[140px]"
             />
           </motion.div>
 
-          {/* Cards Container */}
-          <div className="relative flex-1 pt-8">
+          {/* <div className="relative flex-1 pt-8">
             <div className="relative">
-              {/* First card is always visible and positioned */}
+         
               <EncryptionCardContent
                 text={encryptionSteps[0].text}
                 cardRefs={cardRefs}
@@ -178,7 +178,7 @@ const EncryptionCard = () => {
                 updateLinePoints={updateLinePoints}
               />
 
-              {/* Cards 2 and 3 stack below */}
+           
               {encryptionSteps.slice(1).map((card, index) => {
                 const arrayIndex = index + 1;
                 return (
@@ -203,9 +203,17 @@ const EncryptionCard = () => {
                 );
               })}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
+      <DashedLine />
+      <DashedLine className="w-[232px] h-[107px] -left-[58px] top-[403px]" />
+      <DashedLine className="w-[232px] h-[107px] left-[238px] top-[378px]" />
+      <DashedLine className="w-[232px] h-[107px] left-[243px] top-[383px]" />
+      <DashedLine className="w-[175px] h-[137px] -left-[125px] top-[202px] border-t-0 z-0" />
+      <DashedLine className="w-[175px] h-[137px] -left-[130px] top-[197px] border-t-0 z-0" />
+      <DashedLine className="w-[359px] h-[135px] left-[131px] top-[203.29px] border-t-0 z-0" />
+      <DashedLine className="w-[359px] h-[135px] left-[136px] top-[198.29px] border-t-0 z-0" />
     </motion.div>
   );
 };
