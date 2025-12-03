@@ -2,6 +2,7 @@
 
 import DocSection from "@/components/organisms/DocSection/DocSection";
 import FaqWrapper from "@/components/organisms/FaqWrapper/FaqWrapper";
+import FooterSection from "@/components/organisms/FooterSection/FooterSection";
 import GuideSection from "@/components/organisms/GuideSection/GuideSection";
 import HeroSection from "@/components/organisms/HeroSection/HeroSection";
 import TeamSection from "@/components/organisms/TeamSection/TeamSection";
@@ -16,6 +17,7 @@ export default function Home() {
       <GuideSection />
       <TeamSection />
       <DocSection />
+      <FooterSection />
     </div>
   );
 }

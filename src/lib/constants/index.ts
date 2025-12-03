@@ -280,3 +280,114 @@ export const auditSteps = [
     text: "integrity hash verified",
   },
 ];
+
+export const socialHandles = [
+  {
+    name: "facebook",
+    link: "#",
+    imgUrl: "/assets/icons/facebook.svg",
+  },
+  {
+    name: "Twitter",
+    link: "#",
+    imgUrl: "/assets/icons/x.svg",
+  },
+  {
+    name: "instagram",
+    link: "#",
+    imgUrl: "/assets/icons/instagram.svg",
+  },
+  {
+    name: "linkedin",
+    link: "#",
+    imgUrl: "/assets/icons/linkedin.svg",
+  },
+  {
+    name: "youtube",
+    link: "#",
+    imgUrl: "/assets/icons/youtube.svg",
+  },
+];
+
+export const footerLinks = [
+  {
+    title: "Products",
+    links: [
+      {
+        name: "API documentation",
+        url: "#",
+      },
+      {
+        name: "Changelog automation",
+        url: "#",
+      },
+      {
+        name: "Audit & compliance",
+        url: "#",
+      },
+      {
+        name: "Integration monitoring",
+        url: "#",
+      },
+    ],
+  },
+  {
+    title: "Resources",
+    links: [
+      {
+        name: "Blog",
+        url: "#",
+      },
+      {
+        name: "Developer docs",
+        url: "#",
+      },
+      {
+        name: "Status page",
+        url: "#",
+      },
+      {
+        name: "Help center",
+        url: "#",
+      },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      {
+        name: "About",
+        url: "#",
+      },
+      {
+        name: "Careers",
+        url: "#",
+      },
+      {
+        name: "Security",
+        url: "#",
+      },
+      {
+        name: "Contact",
+        url: "#",
+      },
+    ],
+  },
+  {
+    title: "Legal",
+    links: [
+      {
+        name: "Privacy policy",
+        url: "#",
+      },
+      {
+        name: "Terms of service",
+        url: "#",
+      },
+      {
+        name: "Data protection",
+        url: "#",
+      },
+    ],
+  },
+];
