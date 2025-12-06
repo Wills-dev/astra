@@ -8,7 +8,7 @@ const UpperFooter = () => {
     <div className="flex gap-10">
       <div className="flex-1 w-full flex flex-wrap gap-8 justify-between">
         <div className="">
-          <Logo url="/assets/images/logo-black.svg" />
+          <Logo url="/assets/images/Logo-black.svg" />
           <p className="max-w-[244px] w-full text-[#333741] sm:text-sm text-xs">
             Empowering teams to build, document, and secure APIs with
             confidence.

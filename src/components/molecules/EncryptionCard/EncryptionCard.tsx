@@ -158,7 +158,7 @@ const EncryptionCard = () => {
             transition={{ duration: 0.5 }}
           >
             <Image
-              src="/assets/images/container.svg"
+              src="/assets/images/Container.svg"
               alt="contain"
               width={121}
               height={140}
