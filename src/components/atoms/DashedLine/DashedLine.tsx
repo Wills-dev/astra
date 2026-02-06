@@ -7,7 +7,7 @@ const DashedLine = ({
 }: DashedLineProps) => {
   return (
     <div
-      className={`border rounded-[14px] absolute bottom-0 border border-dashed border-white/10 ${className}`}
+      className={`rounded-[14px] absolute bottom-0 border border-dashed border-white/10 z-0 ${className}`}
     />
   );
 };
